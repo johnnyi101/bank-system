@@ -1,6 +1,7 @@
 package tests;
 
 import Bank.Account;
+import Bank.Interest;
 import Bank.Transaction;
 
 public class MainUnit {
