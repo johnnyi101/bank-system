@@ -16,9 +16,9 @@ public class MainUnit {
             double openingBalance = 56.78;
             Account acc = new Account(1, "Jo", openingBalance);
             if (openingBalance == acc.availiableBalance() && openingBalance == acc.currentbalance())
-                System.out.println("It works!");
+                System.out.println("test_does_balance_match_opening_balance: PASSED");
             else
-                System.out.println("It does not work!");
+                System.out.println("test_does_balance_match_opening_balance: FAILED");
         }
 
 
@@ -28,9 +28,9 @@ public class MainUnit {
             Account acc = new Account(1, "Jo", openingBalance);
             acc.credit(amountToDeposit);
             if ((openingBalance + amountToDeposit) == acc.availiableBalance() && (openingBalance + amountToDeposit) == acc.currentbalance())
-                System.out.println("It works!");
+                System.out.println("test_does_balance_match_after_deposit: PASSED");
             else
-                System.out.println("It does not work!");
+                System.out.println("test_does_balance_match_after_deposit: FAILED");
         }
 
 
@@ -40,8 +40,8 @@ public class MainUnit {
             Account acc = new Account(1, "Jo", openingBalance);
             acc.debit(amountToWithdraw);
             if ((openingBalance - amountToWithdraw) == acc.availiableBalance() && (openingBalance - amountToWithdraw) == acc.currentbalance())
-                System.out.println("It works!");
+                System.out.println("test_does_balance_match_after_withdrawal: PASSED");
             else
-                System.out.println("It does not work!");
+                System.out.println("test_does_balance_match_after_withdrawal: FAILED");
     }
 }
