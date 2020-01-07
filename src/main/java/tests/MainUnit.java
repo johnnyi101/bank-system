@@ -50,7 +50,7 @@ public class MainUnit {
     }
 
     static void test_going_overdrawn_on_credit_account() {
-        double openingBalance = 99;
+        double openingBalance = 10;
         double amountToWithdraw = 44.00;
         Account acc = new CreditAccount(1, "Jo", openingBalance, Interest.HOME_LOAN);
         acc.debit(amountToWithdraw);
