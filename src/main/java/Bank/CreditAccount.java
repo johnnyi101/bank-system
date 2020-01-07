@@ -14,7 +14,6 @@ public class CreditAccount extends Account {
             amt += (rate.rate() / 100) * amt;
             System.out.println(amt);
         }
-        else
         super.debit(amt);
         return super.availiableBalance();
     }
