@@ -50,14 +50,14 @@ public class MainUnit {
     }
 
     static void test_going_overdrawn_on_credit_account() {
-        double openingBalance = 56.78;
+        double openingBalance = 99;
         double amountToWithdraw = 44.00;
         Account acc = new CreditAccount(1, "Jo", openingBalance, Interest.HOME_LOAN);
         acc.debit(amountToWithdraw);
-        if ((openingBalance - amountToWithdraw) == acc.availiableBalance() && (openingBalance - amountToWithdraw) == acc.currentbalance())
-            System.out.println("test_does_balance_match_after_withdrawal: PASSED");
+        if ((openingBalance - (amountToWithdraw + ((Interest.HOME_LOAN.rate() / 100) * amountToWithdraw)) == acc.availiableBalance() && (openingBalance - (amountToWithdraw + (Interest.HOME_LOAN.rate() / 100) * amountToWithdraw)) == acc.currentbalance()))
+            System.out.println("test_going_overdrawn_on_credit_account: PASSED");
         else
-            System.out.println("test_does_balance_match_after_withdrawal: FAILED");
+            System.out.println("test_going_overdrawn_on_credit_account: FAILED");
 
     }
 }
